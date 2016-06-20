@@ -91,16 +91,16 @@ const DateDisplay = React.createClass({
         borderTopRightRadius: 2,
         color: theme.textColor,
         height: 60,
-        padding: 20,
+        padding: 14,
       },
 
       monthDay: {
         root: {
           display: 'inline-block',
-          fontSize: 36,
+          fontSize: 30,
           fontWeight: '400',
-          lineHeight: '36px',
-          height: isLandscape ? 76 : 38,
+          lineHeight: '30px',
+          height: isLandscape ? 76 : 33,
           opacity: this.state.selectedYear ? 0.7 : 1.0,
           transition: Transitions.easeOut(),
           width: '100%',

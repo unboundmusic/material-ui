@@ -331,7 +331,7 @@ const DialogInline = React.createClass({
     const container = ReactDOM.findDOMNode(this);
     const dialogWindow = ReactDOM.findDOMNode(this.refs.dialogWindow);
     const dialogContent = ReactDOM.findDOMNode(this.refs.dialogContent);
-    const minPaddingTop = 16;
+    const minPaddingTop = 0;
 
     //Reset the height in case the window was resized.
     dialogWindow.style.height = '';
@@ -348,18 +348,18 @@ const DialogInline = React.createClass({
     }
 
     // Force a height if the dialog is taller than clientHeight
-    if (autoDetectWindowHeight || autoScrollBodyContent) {
-      const styles = this.getStyles();
-      styles.body = this.mergeStyles(styles.body, bodyStyle);
-      let maxDialogContentHeight = clientHeight - 2 * (styles.body.padding + 64);
-
-      if (title) maxDialogContentHeight -= dialogContent.previousSibling.offsetHeight;
-
-      const hasActions = this._getActionObjects(actions).length > 0;
-      if (hasActions) maxDialogContentHeight -= dialogContent.nextSibling.offsetHeight;
-
-      dialogContent.style.maxHeight = maxDialogContentHeight + 'px';
-    }
+    // if (autoDetectWindowHeight || autoScrollBodyContent) {
+    //   const styles = this.getStyles();
+    //   styles.body = this.mergeStyles(styles.body, bodyStyle);
+    //   let maxDialogContentHeight = clientHeight;
+    //
+    //   if (title) maxDialogContentHeight -= dialogContent.previousSibling.offsetHeight;
+    //
+    //   const hasActions = this._getActionObjects(actions).length > 0;
+    //   if (hasActions) maxDialogContentHeight -= dialogContent.nextSibling.offsetHeight;
+    //
+    //   dialogContent.style.maxHeight = maxDialogContentHeight + 'px';
+    // }
   },
 
   _requestClose(buttonClicked) {

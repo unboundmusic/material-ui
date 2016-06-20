@@ -167,6 +167,7 @@ const DatePickerDialog = React.createClass({
 
       dialogContent: {
         width: this.props.mode === 'landscape' ? 480 : 320,
+        marginTop: -64
       },
 
       dialogBodyContent: {
